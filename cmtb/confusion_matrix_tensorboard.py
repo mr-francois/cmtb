@@ -135,8 +135,8 @@ class ConfMatrixCb(tf.keras.callbacks.Callback):
 
         file_writer = tf.summary.create_file_writer(self.path_tensorboard + "/" + self.run_name)
         file_writer.set_as_default()
-        tf.summary.image(name="confusion matrix train", data=self.train_images, step=int(self.epoch))
-        tf.summary.image(name="confusion matrix validation", data=self.val_images, step=int(self.epoch))
+        tf.summary.image(name="confusion matrix train", data=self.train_images, step=int(epoch))
+        tf.summary.image(name="confusion matrix validation", data=self.val_images, step=int(epoch))
         file_writer.flush()
 
 
