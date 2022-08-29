@@ -10,4 +10,4 @@ Track training and validation scores of your model for every epoch.
 
 # Example 
 
-See this [notebook]()
+See this [notebook](https://colab.research.google.com/drive/1KEc38Hiusb85GAoBjxQfoHy95xs8KVLP?usp=sharing)
