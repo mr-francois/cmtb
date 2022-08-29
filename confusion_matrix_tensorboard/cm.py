@@ -1,7 +1,6 @@
 import tensorflow as tf
 from tensorflow import keras
 import numpy as np
-import tempfile
 import sklearn.metrics
 import io
 import matplotlib.pyplot as plt
