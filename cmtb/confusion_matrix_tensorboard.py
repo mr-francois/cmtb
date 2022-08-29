@@ -103,11 +103,11 @@ class ConfMatrixCb(tf.keras.callbacks.Callback):
             tf.summary.image(name="confusion matrix train", data=self.train_images, step=int(epoch - 1))
             tf.summary.image(name="confusion matrix validation", data=self.val_images, step=int(epoch - 1))
             file_writer.flush()
-            self.epoch < - epoch
+            self.epoch = epoch
 
     def on_train_end(self, logs):
 
-        epoch = self.epoch + 1
+        epoch = self.epoch
         cm_train = np.load(self.cm_dir + "/cm_train_" + str(epoch - 1) + ".npy")
 
         for i in range(len(self.model.metrics)):
