@@ -90,12 +90,12 @@ class ConfMatrixCb(tf.keras.callbacks.Callback):
 
             fig, ax = plt.subplots(figsize=(self.plot_size, self.plot_size))
             cm_train_plot = sklearn.metrics.ConfusionMatrixDisplay(confusion_matrix=cm_train,
-                                                                   display_labels=label_names).plot(cmap="Blues", ax=ax)
+                                                                   display_labels=self.label_names).plot(cmap="Blues", ax=ax)
             self.train_images = plot_to_image(cm_train_plot)
 
             fig, ax = plt.subplots(figsize=(self.plot_size, self.plot_size))
             cm_val_plot = sklearn.metrics.ConfusionMatrixDisplay(confusion_matrix=cm_val,
-                                                                 display_labels=label_names).plot(cmap="Blues", ax=ax)
+                                                                 display_labels=self.label_names).plot(cmap="Blues", ax=ax)
             self.val_images = plot_to_image(cm_val_plot)
 
             file_writer = tf.summary.create_file_writer(self.path_tensorboard + "/" + self.run_name)
@@ -125,12 +125,12 @@ class ConfMatrixCb(tf.keras.callbacks.Callback):
 
         fig, ax = plt.subplots(figsize=(self.plot_size, self.plot_size))
         cm_train_plot = sklearn.metrics.ConfusionMatrixDisplay(confusion_matrix=cm_train,
-                                                               display_labels=label_names).plot(cmap="Blues", ax=ax)
+                                                               display_labels=self.label_names).plot(cmap="Blues", ax=ax)
         self.train_images = plot_to_image(cm_train_plot)
 
         fig, ax = plt.subplots(figsize=(self.plot_size, self.plot_size))
         cm_val_plot = sklearn.metrics.ConfusionMatrixDisplay(confusion_matrix=cm_val,
-                                                             display_labels=label_names).plot(cmap="Blues", ax=ax)
+                                                             display_labels=self.label_names).plot(cmap="Blues", ax=ax)
         self.val_images = plot_to_image(cm_val_plot)
 
         file_writer = tf.summary.create_file_writer(self.path_tensorboard + "/" + self.run_name)
