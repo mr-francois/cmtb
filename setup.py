@@ -6,6 +6,6 @@ setup(
  description='Confusion matrix in tensorboard',
  url='https://github.com/mr-francois/confusion_matrix_tensorboard',
  author_email='mr.francois@gmx.de',
- install_requires=['tensorflow', 'numpy', 'sklearn', 'matplotlib', 'os'],
+ install_requires=['tensorflow', 'numpy', 'sklearn', 'matplotlib'],
  py_modules=[]
 )
