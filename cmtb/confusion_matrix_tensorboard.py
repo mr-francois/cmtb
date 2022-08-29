@@ -110,13 +110,13 @@ class ConfMatrixCb(tf.keras.callbacks.Callback):
         epoch = self.epoch + 1
         cm_train = np.load(self.cm_dir + "/cm_train_" + str(epoch - 1) + ".npy")
 
-        for i in range(len(model.metrics)):
-            if (model.metrics[i].name == "bal_acc"):
+        for i in range(len(self.model.metrics)):
+            if (self.model.metrics[i].name == "bal_acc"):
                 bal_acc_index = i
                 break
 
         # create confusion matrix for last val step manually (storing cm when calling reset_state)
-        model.metrics[bal_acc_index].reset_state()
+        self.model.metrics[bal_acc_index].reset_state()
         cm_val = np.load(self.cm_dir + "/cm_val_" + str(epoch - 1) + ".npy")
 
         if (self.cm_display_percentage):
