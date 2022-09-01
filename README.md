@@ -6,7 +6,7 @@ Track training and validation scores of your model for every epoch.
 
 # Installation
 
-`!pip install -e git+https://github.com/mr-francois/cmtb.git#egg=cmtb`
+`!pip install cmtb`
 
 # Example 
 
