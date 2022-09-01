@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
  name='cmtb',
- version='0.0.1',
+ version='0.0.2',
  description='Confusion matrix in tensorboard',
  url='https://github.com/mr-francois/cmtb',
  author_email='mr.francois@gmx.de',
