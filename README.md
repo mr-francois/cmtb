@@ -6,7 +6,7 @@ Track training and validation scores of your model for every epoch.
 
 # Installation
 
-`!pip install cmtb`
+`pip install cmtb`
 
 # Example 
 
